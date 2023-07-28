@@ -28,7 +28,7 @@
 
 // const fs=require("fs");
 
- const data=" \n Here i am using CRUD to Modify the project";
+//  const data=" \n Here i am using CRUD to Modify the project";
 
 //  fs.readFile("./writing.txt","utf-8",(err,data)=>{
 //     if(err){ 
@@ -39,15 +39,26 @@
 
 // append the file using fs.appendFile;
 
+// const fs=require("fs");
+
+
+// fs.appendFile("writing.txt",data,(err)=>{
+//     if(err){ 
+//                 console.log(err);
+//           }
+//           console.log(" Here i am using CRUD to Modify the project");
+
+//         })
+
+
+
 const fs=require("fs");
+const data="My first Node Project";
+const text="creating a text file...";
 
+for( let i=0 ;i<=10;i++){
 
-fs.appendFile("writing.txt",data,(err)=>{
-    if(err){ 
-                console.log(err);
-          }
-          console.log(" Here i am using CRUD to Modify the project");
-
-        })
-
-
+fs.writeFile(`text-${i}.txt`,data,(err)=>{
+    console.log("writing the text file");
+})
+}
